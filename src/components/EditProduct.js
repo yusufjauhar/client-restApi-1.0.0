@@ -20,7 +20,7 @@ const EditProduct = () => {
   }, []);
 
   const getProductById = async () => {
-    const response = await axios.get(`https://calm-nature-production.up.railway.app/products/${id}`);
+    const response = await axios.get(`https://enthusiastic-happiness-production.up.railway.app/products/${id}`);
     const product = response.data;
     setKodeBuku(product.kode_buku);
     setIsbn(product.isbn);
@@ -51,7 +51,7 @@ const EditProduct = () => {
     formData.append("tanggal_masuk", tanggalMasuk);
     formData.append("stock", stock);
     try {
-      await axios.patch(`https://calm-nature-production.up.railway.app/products/${id}`, formData, {
+      await axios.patch(`https://enthusiastic-happiness-production.up.railway.app/products/${id}`, formData, {
         headers: {
           "Content-type": "multipart/form-data",
         },

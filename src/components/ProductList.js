@@ -10,13 +10,13 @@ const ProductList = () => {
   }, []);
 
   const getProducts = async () => {
-    const response = await axios.get("https://calm-nature-production.up.railway.app/products");
+    const response = await axios.get(`https://enthusiastic-happiness-production.up.railway.app/products`);
     setProducts(response.data);
   };
 
   const deleteProduct = async (productId) => {
     try {
-      await axios.delete(`htttps://calm-nature-production.up.railway.app/products/${productId}`);
+      await axios.delete(`https://enthusiastic-happiness-production.up.railway.app/products/${productId}`);
       getProducts();
     } catch (error) {
       console.log(error);

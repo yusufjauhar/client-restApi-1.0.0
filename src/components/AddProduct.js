@@ -41,7 +41,7 @@ const AddProduct = () => {
     formData.append("stock", stock);
 
     try {
-      await axios.post("http://localhost:5000/products", formData, {
+      await axios.post(`https://enthusiastic-happiness-production.up.railway.app/products`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
